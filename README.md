@@ -4,7 +4,7 @@ Submitted by: **Quynh Giang Ho**
 
 This web app: **A flashcards app that helps you learn trivia about some of the most famous historical figures on the planet! See if you know their names or contributions. Try it out and have some fun!!!**
 
-Time spent: **2** hours spent in total
+Time spent: **3** hours spent in total
 
 ## Required Features
 
@@ -31,11 +31,11 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='./src/assets/images/demo.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 
-GIF created with ...
+GIF created with [Chrome Capture - screenshot & GIF](https://chromewebstore.google.com/detail/chrome-capture-screenshot/ggaabchcecdbomdcnbahdfddfikjmphe)
 
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
@@ -44,11 +44,15 @@ GIF created with ...
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+During the app's development, I encountered these very fun challenges:
+
+- Making the app's appearance suitable for the theme I chose
+- Making the app fun for users so that they would revisit it or stay on it for a longer time
+- Implementing the card flip animation and the integration of Guessing Mode
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright 2025 Quynh Giang Ho (Shepe1304)
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
