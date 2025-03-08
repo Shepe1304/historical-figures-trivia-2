@@ -1,0 +1,93 @@
+.guessMode {
+  right: 3em;
+  top: 3em;
+  width: 17em;
+  height: 10em;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+
+.guessMode--button {
+  margin: 1.25em 0 1em 0;
+  width: 60%;
+  height: 2em;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.25);
+  align-self: center;
+  cursor: pointer;
+  transition: all 0.15s;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  padding: 0.25em;
+}
+
+.guessMode--button:hover {
+  background-color: rgb(212, 226, 238);
+}
+
+.guessMode--button:active {
+  background-color: black;
+  color: rgb(212, 226, 238);
+}
+
+.guessMode--frame {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75em;
+  background-color: #834444;
+  padding: 1em;
+  border-radius: 10px;
+}
+
+.guessMode--currentScore {
+  text-align: center;
+}
+
+.guessMode--input_bar {
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.guessMode--input_bar input {
+  border: none;
+  font-family: "Times New Roman", Times, serif;
+  padding: 0.25em 0.5em;
+}
+
+.guessMode--submit {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 0.25em 0.5em;
+  font-family: "Times New Roman", Times, serif;
+  cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+  .guessMode {
+    left: 50%;
+    transform: translate(-50%, 0);
+    top: 1em;
+    width: 17em;
+    height: 10em;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .guessMode--frame {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    background-color: #834444;
+    padding: 0.25em;
+    border-radius: 10px;
+  }
+}

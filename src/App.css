@@ -1,9 +1,9 @@
 .App {
   height: 100vh;
   background-color: #52221f;
-  /* color: #e2a946; */
   color: #e8d4a3;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }

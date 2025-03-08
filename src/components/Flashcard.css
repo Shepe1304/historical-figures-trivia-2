@@ -117,31 +117,31 @@
   height: 100%;
 }
 
-.flashcard--difficulty {
+.flashcard--difficulty_wrapper {
   position: absolute;
   font-size: 1.5rem;
   bottom: 1.25em;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 0.25em;
 }
 
-.flashcard--difficulty::before,
-.flashcard--difficulty::after {
-  background-color: #000;
-  content: "";
-  display: inline-block;
-  height: 1px;
-  position: relative;
-  vertical-align: middle;
-  width: 50%;
+.hard {
+  background-color: #a0251c;
+  color: white;
 }
 
-.flashcard--difficulty::before {
-  right: 0.5em;
-  margin-left: -50%;
+.medium {
+  background-color: #a87c0b;
+  color: white;
 }
 
-.flashcard--difficulty::after {
-  left: 0.5em;
-  margin-right: -50%;
+.easy {
+  background-color: rgb(88, 172, 77);
 }
 
 .flashcard--buttons {
@@ -170,16 +170,28 @@
   background-color: #de9595;
 }
 
-@media (max-width: 650px) {
+.flashcard--number {
+  align-self: center;
+  font-size: 1.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #713531;
+  width: 4em;
+  border-radius: 100px;
+}
+
+@media (max-width: 1200px) {
   .flashcard--container {
     padding: 0 1em;
+    margin-top: 8em;
   }
 
   .flashcard--headings h2 {
     font-size: 2rem;
     font-family: "Grenze Gotisch", serif;
   }
-  
+
   .flashcard--headings p {
     font-size: 1.15rem;
   }
@@ -193,7 +205,7 @@
     gap: 0.25em;
   }
 
-  .flashcard--difficulty {
+  .flashcard--difficulty_wrapper {
     position: absolute;
     font-size: 1rem;
     bottom: 1.25em;

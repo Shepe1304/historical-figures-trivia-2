@@ -4,10 +4,9 @@ import "./Flashcard.css";
 import bookClosed from "../assets/images/book-solid.svg";
 import bookOpen from "../assets/images/book-open-solid.svg";
 
-const Flashcard = () => {
+const Flashcard = (props) => {
   const { title, description, cards } = flashcardsData;
   const [currentCardIndex, setCurrentCardIndex] = useState(0);
-  const [flipped, setFlipped] = useState(false); // Track card flip state
 
   const shuffleCards = (cards) => {
     const shuffled = [...cards];
@@ -20,18 +19,39 @@ const Flashcard = () => {
 
   const [shuffledCards, setShuffledCards] = useState(shuffleCards(cards));
 
+  useEffect(() => {
+    setShuffledCards(shuffleCards(cards));
+    setTimeout(() => {
+      setCurrentCardIndex(0);
+    }, 200);
+    props.setFlipped(false);
+  }, [props.guessMode]);
+
+  useEffect(() => {
+    props.setAnswer(shuffledCards[currentCardIndex].answer);
+    props.setDifficulty(shuffledCards[currentCardIndex].difficulty);
+  }, [currentCardIndex]);
+
   const handleNextCard = () => {
     setTimeout(() => {
       setCurrentCardIndex((currentCardIndex + 1) % cards.length);
     }, 200);
-    setFlipped(false);
+    props.setFlipped(false);
+    if (props.guessMode) {
+      props.setGuess("");
+      props.setComment("");
+    }
   };
 
   const handlePrevCard = () => {
     setTimeout(() => {
       setCurrentCardIndex((currentCardIndex - 1 + cards.length) % cards.length);
     }, 200);
-    setFlipped(false);
+    props.setFlipped(false);
+    if (props.guessMode) {
+      props.setGuess("");
+      props.setComment("");
+    }
   };
 
   return (
@@ -42,8 +62,8 @@ const Flashcard = () => {
       </div>
       <div className="flashcard--wrapper">
         <div
-          className={`flashcard ${flipped ? "flipped" : ""}`}
-          onClick={() => setFlipped(!flipped)} // Toggle flip state on click
+          className={`flashcard ${props.flipped ? "flipped" : ""}`}
+          onClick={() => props.setFlipped(!props.flipped)} // Toggle flip state on click
         >
           <div className="flashcard--inner">
             <div className="flashcard--front">
@@ -66,13 +86,19 @@ const Flashcard = () => {
                   </div>
                 )}
               </div>
-              <div className="flashcard--difficulty">
-                {shuffledCards[currentCardIndex].difficulty
-                  .charAt(0)
-                  .toUpperCase() +
-                  shuffledCards[currentCardIndex].difficulty
-                    .slice(1)
-                    .toLowerCase()}
+              <div
+                className={`flashcard--difficulty_wrapper ${shuffledCards[
+                  currentCardIndex
+                ].difficulty.toLowerCase()}`}
+              >
+                <div className="flashcard--difficulty">
+                  {shuffledCards[currentCardIndex].difficulty
+                    .charAt(0)
+                    .toUpperCase() +
+                    shuffledCards[currentCardIndex].difficulty
+                      .slice(1)
+                      .toLowerCase()}
+                </div>
               </div>
             </div>
             <div className="flashcard--back">
@@ -101,6 +127,9 @@ const Flashcard = () => {
         <button className="flashcard--button" onClick={handleNextCard}>
           Next
         </button>
+      </div>
+      <div className="flashcard--number">
+        {currentCardIndex + 1} / {cards.length}
       </div>
     </div>
   );
