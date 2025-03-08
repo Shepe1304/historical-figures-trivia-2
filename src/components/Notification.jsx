@@ -14,9 +14,8 @@ const Notification = (props) => {
         >
           <img src={xmark} alt="" />
         </div>
-        {props.guessMode
-          ? "You entered guess mode"
-          : "You exited guess mode."}
+        {props.guessMode ? "You entered guess mode." : "You exited guess mode."}
+        <div>All cards re-shuffled.</div>
       </div>
     </div>
   );

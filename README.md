@@ -24,7 +24,8 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-- [ ] List anything else that you added to improve the site's functionality!
+- [x] Guessing mode with score-keeping mechanism so users can have fun with guessing the answers
+- [x] Making the website fully responsive
 
 ## Video Walkthrough
 

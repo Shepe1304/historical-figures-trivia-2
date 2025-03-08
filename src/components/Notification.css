@@ -17,7 +17,10 @@
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 20px;
-  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   color: black;
   font-size: 2rem;
   text-align: center;
