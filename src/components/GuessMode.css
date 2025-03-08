@@ -55,6 +55,7 @@
 
 .guessMode--input_bar input {
   border: none;
+  border-radius: 0;
   font-family: "Times New Roman", Times, serif;
   padding: 0.25em 0.5em;
 }

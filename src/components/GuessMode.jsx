@@ -33,7 +33,7 @@ const GuessMode = (props) => {
       {props.guessMode && (
         <div className="guessMode--frame">
           <div className="guessMode--currentScore">
-            Your score: {score} / 11
+            Your score: {score}
           </div>
           <div className="guessMode--input_bar">
             <input
