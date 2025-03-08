@@ -1,0 +1,209 @@
+.flashcard--container {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.flashcard--headings {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.flashcard--headings h2 {
+  font-size: 3rem;
+  font-family: "Grenze Gotisch", serif;
+}
+
+.flashcard--headings p {
+  font-size: 1.25rem;
+}
+
+.flashcard--wrapper {
+  align-self: center;
+  width: 35em;
+  height: 25em;
+  aspect-ratio: 7 / 5;
+  perspective: 1000px;
+}
+
+.flashcard {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.flashcard.flipped {
+  transform: rotateY(180deg);
+}
+
+.flashcard--inner {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+.flashcard--front,
+.flashcard--back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Hide the back of the element */
+  background: linear-gradient(to bottom right, #d19e1d, #ffd86e, #e3a812);
+  color: black;
+  border-radius: 25px;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0px 5px 5px #481515;
+  transition: box-shadow 0.15s;
+}
+
+.flashcard--front:hover,
+.flashcard--back:hover {
+  box-shadow: 0 0px 10px 15px #481515;
+}
+
+.flashcard--back {
+  transform: rotateY(180deg); /* Flip the back face initially */
+}
+
+.flashcard--icon {
+  height: 10%;
+  background-color: white;
+  border-radius: 100px;
+  position: absolute;
+  top: 2.5em;
+}
+
+.flashcard--icon img {
+  height: 100%;
+}
+
+.flashcard--front {
+  display: flex;
+}
+
+.flashcard--content {
+  height: 100%;
+  font-size: 2.5rem;
+  text-align: center;
+  font-family: "Libre Baskerville", serif;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25em;
+}
+
+.flashcard--image {
+  height: 50%;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.flashcard--image img {
+  height: 100%;
+}
+
+.flashcard--difficulty {
+  position: absolute;
+  font-size: 1.5rem;
+  bottom: 1.25em;
+}
+
+.flashcard--difficulty::before,
+.flashcard--difficulty::after {
+  background-color: #000;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  position: relative;
+  vertical-align: middle;
+  width: 50%;
+}
+
+.flashcard--difficulty::before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+
+.flashcard--difficulty::after {
+  left: 0.5em;
+  margin-right: -50%;
+}
+
+.flashcard--buttons {
+  align-self: center;
+  display: flex;
+  gap: 2em;
+}
+
+.flashcard--button {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.25rem;
+  font-weight: 700;
+  width: 8em;
+  padding: 0.25em;
+  border: none;
+  border-radius: 10px;
+  background-color: #834444;
+  color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.flashcard--button:hover {
+  color: black;
+  background-color: #de9595;
+}
+
+@media (max-width: 650px) {
+  .flashcard--container {
+    padding: 0 1em;
+  }
+
+  .flashcard--headings h2 {
+    font-size: 2rem;
+    font-family: "Grenze Gotisch", serif;
+  }
+  
+  .flashcard--headings p {
+    font-size: 1.15rem;
+  }
+
+  .flashcard--icon {
+    top: 1.5em;
+  }
+
+  .flashcard--content {
+    font-size: 1.25rem;
+    gap: 0.25em;
+  }
+
+  .flashcard--difficulty {
+    position: absolute;
+    font-size: 1rem;
+    bottom: 1.25em;
+  }
+
+  .flashcard--wrapper {
+    align-self: center;
+    width: 20em;
+    height: auto;
+    aspect-ratio: 7 / 5;
+    perspective: 1000px;
+  }
+}
