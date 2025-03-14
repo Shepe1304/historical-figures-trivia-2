@@ -47,7 +47,6 @@ GIF created with [Chrome Capture - screenshot & GIF](https://chromewebstore.goog
 During the app's development, I encountered these very fun challenges:
 
 - Making the app's appearance suitable for the theme I chose
-- Making the card flip animation smooth and the text transition smooth, even when the user clicks the next card
 - Making the app fun for users so that they would revisit it or stay on it for a longer time
 - Implementing the card flip animation and the integration of Guessing Mode
 
