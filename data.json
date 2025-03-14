@@ -1,0 +1,84 @@
+{
+  "title": "Historical Figures Trivia",
+  "description": "Test your knowledge of famous historical figures and their contributions.",
+  "cards": [
+    {
+      "question": "Who was the first President of the United States?",
+      "answer": "George Washington",
+      "difficulty": "easy",
+      "lastReviewed": "2025-01-01T00:00:00Z",
+      "type": "text"
+    },
+    {
+      "question": "Which scientist developed the theory of general relativity?",
+      "answer": "Albert Einstein",
+      "difficulty": "medium",
+      "lastReviewed": "2025-01-01T00:00:00Z",
+      "type": "text"
+    },
+    {
+      "question": "Who led the Soviet Union during World War II?",
+      "answer": "Joseph Stalin",
+      "difficulty": "hard",
+      "lastReviewed": "2025-01-01T00:00:00Z",
+      "type": "text"
+    },
+    {
+      "question": "Which famous nurse revolutionized healthcare during the Crimean War?",
+      "answer": "Florence Nightingale",
+      "difficulty": "medium",
+      "lastReviewed": "2025-01-01T00:00:00Z",
+      "type": "text"
+    },
+    {
+      "question": "Who painted the Mona Lisa?",
+      "answer": "Leonardo da Vinci",
+      "difficulty": "easy",
+      "lastReviewed": "2025-01-01T00:00:00Z",
+      "type": "text"
+    },
+    {
+      "question": "Which Egyptian queen was the last active ruler of the Ptolemaic Kingdom?",
+      "answer": "Cleopatra VII",
+      "difficulty": "hard",
+      "lastReviewed": "2025-01-01T00:00:00Z",
+      "type": "text"
+    },
+    {
+      "question": "Who was the British Prime Minister during most of World War II?",
+      "answer": "Winston Churchill",
+      "difficulty": "medium",
+      "lastReviewed": "2025-01-01T00:00:00Z",
+      "type": "text"
+    },
+    {
+      "question": "Which civil rights leader gave the famous 'I Have a Dream' speech?",
+      "answer": "Martin Luther King Jr.",
+      "difficulty": "easy",
+      "lastReviewed": "2025-01-01T00:00:00Z",
+      "type": "text"
+    },
+    {
+      "question": "Who was the first woman to fly solo across the Atlantic Ocean?",
+      "answer": "Amelia Earhart",
+      "difficulty": "medium",
+      "lastReviewed": "2025-01-01T00:00:00Z",
+      "type": "text"
+    },
+    {
+      "question": "Which Mongol leader founded the largest contiguous empire in history?",
+      "answer": "Genghis Khan",
+      "difficulty": "hard",
+      "lastReviewed": "2025-01-01T00:00:00Z",
+      "type": "text"
+    },
+    {
+      "question": "Who is this scientist?",
+      "answer": "Nikola Tesla",
+      "difficulty": "hard",
+      "lastReviewed": "2025-01-01T00:00:00Z",
+      "type": "image",
+      "image": "nikola_tesla.jpeg"
+    }
+  ]
+}
