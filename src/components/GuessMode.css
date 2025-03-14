@@ -45,6 +45,9 @@
 
 .guessMode--currentScore {
   text-align: center;
+  width: 30%;
+  color: rgb(255, 237, 196);
+  font-weight: bold;
 }
 
 .guessMode--input_bar {
@@ -67,6 +70,82 @@
   padding: 0.25em 0.5em;
   font-family: "Times New Roman", Times, serif;
   cursor: pointer;
+}
+
+.guessMode--first_line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0 0.5em;
+}
+
+.guessMode--difficulty_counts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25em;
+  width: 35%;
+}
+
+.guessMode--difficulty_counts div {
+  border-radius: 100px;
+  line-height: 1.5em;
+  width: 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.guessMode--difficulty_hard {
+  background-color: #a0251c;
+  color: white;
+}
+
+.guessMode--difficulty_medium {
+  background-color: #a87c0b;
+  color: white;
+}
+
+.guessMode--difficulty_easy {
+  background-color: rgb(88, 172, 77);
+  color: black;
+}
+
+.guessMode--streak_container {
+  width: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start
+}
+
+.guessMode--streak {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2em;
+  width: 2em;
+  position: relative;
+}
+
+.guessMode--streak_count {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  font-weight: bold;
+  z-index: 1000;
+}
+
+.guessMode--streak img {
+  height: 100%;
+  opacity: 0.85;
+}
+
+.guessMode--comment {
+  padding: 0 0.5em;
+  text-align: center;
 }
 
 @media (max-width: 1200px) {
