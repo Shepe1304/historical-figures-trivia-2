@@ -62,6 +62,7 @@ const Flashcard = (props) => {
       <div className="flashcard--headings">
         <h2>{title}</h2>
         <p>{description}</p>
+        <button>Remove</button>
       </div>
       <div className="flashcard--wrapper">
         <div

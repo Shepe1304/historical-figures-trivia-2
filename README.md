@@ -1,37 +1,38 @@
-# Web Development Project 2 - _Historical Figures Trivia_
+# Web Development Project 3 - _Historical Figures Trivia 2_
 
 Submitted by: **Quynh Giang Ho**
 
-This web app: **A flashcards app that helps you learn trivia about some of the most famous historical figures on the planet! See if you know their names or contributions. Try it out and have some fun!!!**
+This web app: **A flashcards app that helps you learn trivia about some of the most famous historical figures on the planet, now with partial score, correct streak tracking, longest streak tracking, and difficulty count for guessing mode, as well as a shuffle button for you to shuffle the deck as many times as you want. Try it out and have some fun!!!**
 
-Time spent: **3** hours spent in total
+Time spent: **2** hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-- [x] **The title of the card set and some information about it, such as a short description and the total number of cards are displayed**
-- [x] **A single card at a time is displayed, only showing one of the components of the information pair**
-- [x] **A list of card pairs is created**
-- [x] **Clicking on the card shows the corresponding component of the information pair**
-- [x] **Clicking the next button displays a random new card**
+- [x] **The user can enter their guess in a box before seeing the flipside of the card**
+- [x] **Clicking on a submit button shows visual feedback about whether the answer was correct or incorrect**
+- [x] **A back button is displayed on the card and can be used to return to the previous card in a set sequence**
+- [x] **A next button is displayed on the card and can be used to navigate to the next card in a set sequence**
 
 The following **optional** features are implemented:
 
-- [x] Cards contains images in addition to or in place of text
-- [x] Cards have different visual styles such as color based on their category
-- [x] _visual style implemented_
+- [x] A shuffle button is used to randomize the order of the cards
+- [x] A user's answer may be counted as correct even when it is slightly different from the target answer
+- [x] A counter displays the user's current and longest streak of correct responses
+- [ ] A user can mark a card that they have mastered and have it removed from the pool of answers as well as added to a list of mastered cards
 
 The following **additional** features are implemented:
 
-- [x] Guessing mode with score-keeping mechanism so users can have fun with guessing the answers
 - [x] Making the website fully responsive
+- [x] Making guessing mode separate from the normal flashcards mode
+- [x] Disabling buttons like Previous and Shuffle in guessing mode to make the guessing more fair and challenging
 
 ## Video Walkthrough
 
-Here's a walkthrough of implemented required features:
+Here's a walkthrough of implemented user stories:
 
-<img src='./src/assets/images/demo.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src="./src/assets/images/trivia2.gif" title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 
@@ -44,11 +45,12 @@ GIF created with [Chrome Capture - screenshot & GIF](https://chromewebstore.goog
 
 ## Notes
 
-During the app's development, I encountered these very fun challenges:
+During the app's development, these are a few challenges I encountered and resolved:
 
-- Making the app's appearance suitable for the theme I chose
-- Making the app fun for users so that they would revisit it or stay on it for a longer time
-- Implementing the card flip animation and the integration of Guessing Mode
+- Accurately managing current card after each shuffle
+- Fairly evaluate partial scores (for example, I did not just use answer.includes(guess) (suppose that answer and guess are both string variables), because an answer like "George Washington" includes "a", but the response "a" is not good enough for partial score!)
+- Making guessing mode and normal flashcards mode separate (users can turn enter or exit guessing mode when they want)
+- Disabling "Previous" button for guessing mode to make sure users can not just go back to previous questions and answer 1 question specifically over and over again for scores
 
 ## License
 
