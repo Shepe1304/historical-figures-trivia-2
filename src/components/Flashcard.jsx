@@ -3,7 +3,6 @@ import flashcardsData from "../../public/data.json";
 import "./Flashcard.css";
 import bookClosed from "../assets/images/book-solid.svg";
 import bookOpen from "../assets/images/book-open-solid.svg";
-import shuffle from "../assets/images/shuffle-solid.svg";
 
 const Flashcard = (props) => {
   const { title, description, cards } = flashcardsData;
@@ -31,9 +30,7 @@ const Flashcard = (props) => {
   useEffect(() => {
     props.setAnswer(shuffledCards[currentCardIndex].answer);
     props.setDifficulty(shuffledCards[currentCardIndex].difficulty);
-
-    console.log(shuffledCards);
-  }, [currentCardIndex, shuffledCards]);
+  }, [currentCardIndex]);
 
   const handleNextCard = () => {
     setTimeout(() => {
@@ -111,43 +108,22 @@ const Flashcard = (props) => {
               <div className="flashcard--content">
                 {shuffledCards[currentCardIndex].answer}
               </div>
-              <div
-                className={`flashcard--difficulty_wrapper ${shuffledCards[
-                  currentCardIndex
-                ].difficulty.toLowerCase()}`}
-              >
-                <div className="flashcard--difficulty">
-                  {shuffledCards[currentCardIndex].difficulty
-                    .charAt(0)
-                    .toUpperCase() +
-                    shuffledCards[currentCardIndex].difficulty
-                      .slice(1)
-                      .toLowerCase()}
-                </div>
+              <div className="flashcard--difficulty">
+                {shuffledCards[currentCardIndex].difficulty
+                  .charAt(0)
+                  .toUpperCase() +
+                  shuffledCards[currentCardIndex].difficulty
+                    .slice(1)
+                    .toLowerCase()}
               </div>
             </div>
           </div>
         </div>
       </div>
       <div className="flashcard--buttons">
-        {!props.guessMode && (
-          <button className="flashcard--button" onClick={handlePrevCard}>
-            Previous
-          </button>
-        )}
-        {!props.guessMode && (
-          <abbr title="Shuffle Cards">
-            <div
-              className="flashcard--shuffle"
-              onClick={() => {
-                setCurrentCardIndex(0);
-                setShuffledCards(shuffleCards(cards));
-              }}
-            >
-              <img src={shuffle} alt="" />
-            </div>
-          </abbr>
-        )}
+        <button className="flashcard--button" onClick={handlePrevCard}>
+          Previous
+        </button>
         <button className="flashcard--button" onClick={handleNextCard}>
           Next
         </button>

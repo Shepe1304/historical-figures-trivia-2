@@ -148,7 +148,7 @@
 .flashcard--buttons {
   align-self: center;
   display: flex;
-  gap: 1em;
+  gap: 2em;
 }
 
 .flashcard--button {
@@ -169,25 +169,6 @@
 .flashcard--button:hover {
   color: black;
   background-color: #de9595;
-}
-
-.flashcard--shuffle {
-  width: 2.25em;
-  height: 2.25em;
-  padding: 0.3em;
-  display: flex;
-  background-color: #de9595;
-  border-radius: 100px;
-  cursor: pointer;
-  transition: all 0.15s;
-}
-
-.flashcard--shuffle:hover {
-  background-color: #ecc4c4;
-}
-
-.flashcard--shuffle img {
-  height: 100%;
 }
 
 .flashcard--number {
@@ -237,13 +218,5 @@
     height: auto;
     aspect-ratio: 7 / 5;
     perspective: 1000px;
-  }
-
-  .flashcard--button {
-    font-family: "Courier New", Courier, monospace;
-    font-size: 1.15rem;
-    font-weight: 700;
-    width: 7em;
-    padding: 0.1em;
   }
 }
