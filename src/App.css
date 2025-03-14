@@ -3,6 +3,7 @@
   background-color: #52221f;
   color: #e8d4a3;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
